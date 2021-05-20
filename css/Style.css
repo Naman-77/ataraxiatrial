@@ -1,0 +1,249 @@
+@import url("../css/fonts.css");
+
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --Lobster: "Lobster", cursive;
+}
+:root {
+  --Girassol: "Girassol", cursive;
+}
+
+:root {
+  --Open_Sans: "Open_Sans", cursive;
+}
+
+:root {
+  --Libre_Baskerville: "Livre_Baskerville", cursive;
+}
+
+:root {
+  --Bree_Serif: "Bree_Serif", cursive;
+}
+
+:root {
+  --Lexend: "Lexend", cursive;
+}
+
+:root {
+  --BarlowCodensed: "BarlowCondensed", cursive;
+}
+
+:root {
+  --textgray: #3f4954;
+  --sky: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+/*------------Global Classes-------*/
+a {
+  text-decoration: none;
+  color: var(--textgray);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1 {
+  font-family: var(--Lexend);
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-family: var(--Libre_Baskerville);
+}
+
+h3 {
+  font-family: var(--BarlowCodensed);
+  font-size: 1.5rem;
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: rgba(1, 34, 63, 0.904);
+  font-family: var(--BarlowCodensed);
+  cursor: pointer;
+}
+
+span {
+  font-family: var(--Lobster);
+}
+
+.container {
+  margin: 0 5vw;
+}
+/*----X-------Global Classes---X---*/
+
+/*--------------navbar--------------*/
+.nav {
+  background: white;
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+  transition: height 1.2s ease-in-out;
+}
+
+.nav .nav-menu {
+  justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+  font-size: 1.4rem;
+  color: var(--textgray);
+}
+
+.collapse {
+  height: 30rem;
+}
+
+.nav .nav-items {
+  display: flex;
+  margin: 0;
+}
+
+.nav .nav-items .nav-link {
+  padding: 1.6rem 1rem;
+  font-size: 1.3rem;
+  position: relative;
+  font-family: var(--BarlowCodensed);
+}
+
+.nav .nav-items .nav-link:hover {
+  background-color: #01223f;
+}
+
+.nav .nav-items .nav-link:hover a {
+  color: white;
+}
+
+.nav .nav-brand a {
+  font-size: 1.9rem;
+  padding: 1rem;
+  display: block;
+  font-family: var(--Lobster);
+}
+
+.nav .social {
+  padding: 1.4rem 0;
+}
+
+.nav .social i {
+  padding: 0 0.3rem;
+}
+
+.nav .social i:hover {
+  color: rgba(131, 130, 134, 0.932);
+}
+/*-------X------navbar------X-------*/
+
+/*-------------main content---------*/
+
+/*-------------site title-----------*/
+main .site-title {
+  background: url(../assets/H69Xai.jpg);
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: white;
+}
+
+main .site-title h1,
+h3 {
+  margin: 0.3rem;
+}
+
+main .site-title .btn {
+  margin: 1.8rem;
+  background: var(--sky);
+}
+
+main .site-title .btn:hover {
+  background: transparent;
+  border: 1px solid white;
+}
+
+/*-----X-------site title-----X-----*/
+
+/*-------------blog carousel----------*/
+main .blog {
+  background: url(../assets/Abract01.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+}
+
+main .blog .blog-post {
+  padding-top: 6rem;
+}
+
+main .blog-post .blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 3rem 2rem;
+  box-shadow: 0 15px 20px rgba(131, 130, 134, 0.932);
+}
+
+main .blog-content .blog-title {
+  padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+  padding: 0.7rem 2rem;
+  background: var(--sky);
+  margin: 0.5rem;
+}
+
+main .blog-content span {
+  display: block;
+}
+
+/*------X------main content----X----*/
+
+/*2---------if Viewport less then 750---------*/
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
+/*----X----if Viewport less then 750----X----*/
